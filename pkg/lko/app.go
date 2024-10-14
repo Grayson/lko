@@ -28,7 +28,7 @@ func (app *App) Run() error {
 
 	opts := types.ImageBuildOptions{
 		Tags:   []string{"lko"},
-		Labels: map[string]string{},
+		Remove: true,
 	}
 
 	build, err := archive.TarWithOptions("../../test/server", &archive.TarOptions{})
